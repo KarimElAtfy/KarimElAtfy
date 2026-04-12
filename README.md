@@ -28,7 +28,7 @@ My goal is to grow through real practice: building, testing, making mistakes, fi
 ## Certifications
 
 - AZ-900: Microsoft Azure Fundamentals
-- Currently preparing for AZ-104
+- Currently preparing for AZ-104, CCNA
 
 ## Featured project
 
@@ -69,6 +69,7 @@ To me, that is one of the most valuable ways to learn cloud and infrastructure w
 - English — C1
 - French — conversational
 - German — currently learning
+- Russian — currently learning
 
 ## Contact
 
