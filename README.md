@@ -1,28 +1,40 @@
 # Hi, I'm Karim
 
-Computer Engineering student at Politecnico di Milano, building practical skills in cloud engineering, Infrastructure as Code, Linux, networking, and security fundamentals.
+I'm a Computer Engineering student at Politecnico di Milano, currently building practical skills in cloud infrastructure with Azure.
+
+I passed the AZ-900 certification, I'm currently working toward AZ-104, and I'm strengthening my hands-on experience with Terraform, Linux fundamentals, and infrastructure-focused projects.
+
+My goal is to grow through real practice: building, testing, making mistakes, fixing them, and learning by doing.
 
 ## What I'm focusing on
 
-- Cloud infrastructure and core architecture concepts
+- Cloud infrastructure on Azure
 - Infrastructure as Code with Terraform
-- Linux systems and server management
-- Networking fundamentals and security-minded design
-- Building hands-on, realistic projects instead of tutorial-only work
+- Linux fundamentals for real-world cloud environments
+- Git and GitHub workflows
+- Building practical, recruiter-ready infrastructure projects
 
-## Current stack
+## Current background
 
-- Azure
-- Terraform
-- Linux
-- Git and GitHub
-- Networking fundamentals
-- Basic cloud security practices
+- **Azure** — solid practical familiarity with core services and management workflows
+- **Terraform** — comfortable with the fundamentals and actively using it in projects
+- **Git / GitHub** — strong day-to-day confidence
+- **Linux** — basic operational knowledge, currently improving it step by step
+- **Bash** — basic usage
+- **Nginx** — basic usage in cloud VM scenarios
+- **JSON / ARM / Bicep** — can read and understand them, but currently focused more on Terraform
+- **Python** — academic background, but not yet applied in real projects
+
+## Certifications
+
+- AZ-900: Microsoft Azure Fundamentals
+- Currently preparing for AZ-104
 
 ## Featured project
 
 ### Azure Terraform Linux VM
-A practical Azure infrastructure project built with Terraform, designed to reflect a small but realistic cloud deployment.
+
+A practical Azure infrastructure project built with Terraform to simulate a small but realistic cloud deployment.
 
 **What it includes**
 - Virtual network and subnet
@@ -30,27 +42,34 @@ A practical Azure infrastructure project built with Terraform, designed to refle
 - Linux virtual machine with SSH access
 - Automated Nginx installation through cloud-init
 
-**Why I built it**
-- To practice Infrastructure as Code in a realistic scenario
-- To improve confidence with Azure resource design
-- To apply core networking and security concepts in a hands-on project
+**What this project helped me practice**
+- Azure resource structure
+- Infrastructure as Code fundamentals
+- Basic networking and access control
+- Practical deployment workflow from code to running VM
 
-## How I like to learn
+## How I approach learning
 
-I prefer learning by building.  
-My goal is to develop solid fundamentals first, then grow toward more advanced cloud, automation, and security scenarios through real projects.
+I’m trying to move beyond university theory and build real technical experience as early as possible.
 
-## What I'm working toward
+I learn best by doing: creating projects, breaking things, understanding mistakes, correcting them, and improving from there.  
+To me, that is one of the most valuable ways to learn cloud and infrastructure work.
 
-I'm currently strengthening my foundations in:
-- cloud infrastructure
-- Infrastructure as Code
-- Linux
-- networking
-- security fundamentals
+## Currently improving
 
-My long-term direction is to grow into cloud and infrastructure-focused engineering roles through consistent hands-on practice.
+- Azure administration knowledge
+- Terraform best practices
+- Linux operational confidence
+- Infrastructure design mindset
+- More real-world cloud projects
+
+## Languages
+
+- Italian — native
+- English — C1
+- French — conversational
+- German — currently learning
 
 ## Contact
 
-- LinkedIn: [www.linkedin.com/in/karim-el-atfy]      
+- LinkedIn: [www.linkedin.com/in/karim-el-atfy]
