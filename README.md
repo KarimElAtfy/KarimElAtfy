@@ -30,10 +30,29 @@ My goal is to grow through real practice: building, testing, making mistakes, fi
 - AZ-900: Microsoft Azure Fundamentals
 - Currently preparing for AZ-104, CCNA
 
-## Featured project
+## Featured Projects
+
+### Azure Terraform Secure Two-Tier Infrastructure
+A hands-on Azure infrastructure project built with Terraform to simulate a more realistic cloud environment with separated management and workload layers, subnet-based security, ARM64 Linux virtual machines, and automated provisioning through cloud-init.
+
+**What it includes**
+- Virtual network with separate management and web subnets
+- Subnet-based Network Security Groups
+- Dedicated management VM for administrative access
+- Public-facing web VM running Nginx
+- SSH key-based access control
+- Automated VM provisioning with cloud-init
+- ARM64 Ubuntu virtual machines on Azure
+
+**What this project helped me practice**
+- Azure virtual network and subnet design
+- Network Security Groups and controlled access paths
+- Infrastructure as Code with Terraform
+- Linux VM provisioning and SSH authentication
+- cloud-init automation
+- More realistic infrastructure design beyond a single-VM deployment
 
 ### Azure Terraform Linux VM
-
 A practical Azure infrastructure project built with Terraform to simulate a small but realistic cloud deployment.
 
 **What it includes**
