@@ -32,10 +32,36 @@ My goal is to grow through real practice: building, testing, making mistakes, fi
 
 ## Featured Projects
 
+### Azure Terraform Secure Private Platform
+A production-minded Azure infrastructure project built with Terraform to simulate a more realistic cloud environment with private compute, secure administrative access through Azure Bastion, modular Infrastructure as Code, basic monitoring, and secure secret management foundations.
+
+**What it includes**
+
+- Virtual network with dedicated application and Azure Bastion subnets
+- Private ARM64 Linux virtual machine with no public IP
+- Azure Bastion for secure administrative access
+- Network Security Group applied to the application subnet
+- Automated Nginx installation and configuration through cloud-init
+- Log Analytics Workspace and CPU metric alert
+- Azure Key Vault as a foundation for secure secret handling
+- Modular Terraform structure with separate network, compute, bastion, monitoring, and key vault modules
+
+**What this project helped me practice**
+
+- Private infrastructure design on Azure
+- Secure VM administration without direct public SSH exposure
+- Terraform modularization and cleaner IaC structure
+- ARM64 Linux VM deployment on Azure
+- cloud-init automation and service bootstrap
+- Basic Azure monitoring and alerting
+- Security-aware infrastructure design
+- Real deployment troubleshooting and validation
+
 ### Azure Terraform Secure Two-Tier Infrastructure
 A hands-on Azure infrastructure project built with Terraform to simulate a more realistic cloud environment with separated management and workload layers, subnet-based security, ARM64 Linux virtual machines, and automated provisioning through cloud-init.
 
 **What it includes**
+
 - Virtual network with separate management and web subnets
 - Subnet-based Network Security Groups
 - Dedicated management VM for administrative access
@@ -45,6 +71,7 @@ A hands-on Azure infrastructure project built with Terraform to simulate a more 
 - ARM64 Ubuntu virtual machines on Azure
 
 **What this project helped me practice**
+
 - Azure virtual network and subnet design
 - Network Security Groups and controlled access paths
 - Infrastructure as Code with Terraform
@@ -56,12 +83,14 @@ A hands-on Azure infrastructure project built with Terraform to simulate a more 
 A practical Azure infrastructure project built with Terraform to simulate a small but realistic cloud deployment.
 
 **What it includes**
+
 - Virtual network and subnet
 - Network Security Group rules
 - Linux virtual machine with SSH access
 - Automated Nginx installation through cloud-init
 
 **What this project helped me practice**
+
 - Azure resource structure
 - Infrastructure as Code fundamentals
 - Basic networking and access control
