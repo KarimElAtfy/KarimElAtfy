@@ -1,272 +1,320 @@
 # Hi, I'm Karim
 
-I'm a Computer Engineering student at Politecnico di Milano, currently building practical skills in Cloud Engineering, Infrastructure as Code and DevSecOps on Azure.
+I'm a Computer Engineering student at Politecnico di Milano, building a junior profile around cloud infrastructure, Linux, networking, Terraform and DevOps.
 
-I focus on learning by building real projects: designing infrastructure, writing Terraform, deploying workloads, debugging issues, documenting decisions and improving each project step by step.
+I use GitHub as a public lab notebook for my cloud projects. Not everything here is meant to be perfect production architecture, but everything is built to teach me something real: how Azure resources fit together, how infrastructure breaks, how to document decisions, and how to improve the next deployment.
 
-My current goal is to grow toward Cloud / Infrastructure / DevOps engineering roles by combining academic foundations with hands-on cloud projects.
-
----
-
-## Current Focus
-
-* Azure cloud infrastructure
-* Infrastructure as Code with Terraform
-* Linux fundamentals for cloud environments
-* Docker and containerized workloads
-* GitHub Actions and CI/CD workflows
-* Cloud security fundamentals
-* Identity, access control and secret management
-* Monitoring, logging and observability
+My portfolio is here: [kaystack.dev](https://kaystack.dev)
 
 ---
 
-## Current Background
+## What I'm aiming for
 
-* **Azure** — practical familiarity with core infrastructure services, networking, identity and deployment workflows
-* **Terraform** — actively using it to build modular Azure infrastructure projects
-* **Docker** — containerizing applications and validating images locally and in CI/CD
-* **Git / GitHub** — comfortable with commits, branches, Pull Requests and GitHub Actions workflows
-* **Linux** — improving operational confidence through cloud infrastructure projects
-* **Python** — academic background, now also applied in a containerized FastAPI cloud project
-* **Networking** — learning and applying subnetting, access control, load balancing and private infrastructure patterns
-* **Security** — practicing RBAC, Managed Identity, Key Vault, secretless CI/CD and security scanning
+I'm currently looking for junior roles or internships in areas like:
 
----
+* Junior Cloud Engineer
+* Junior System Administrator
+* Cloud Operations
+* Junior DevOps / Platform Engineering
+* Infrastructure or monitoring-focused roles
 
-## Certifications
-
-* **AZ-900: Microsoft Azure Fundamentals**
-* Currently preparing for **AZ-104** and **CCNA**
+I am still early in my career, but I try to build projects that show how I think: start simple, add one layer at a time, document the choices, and be honest about what still needs hardening.
 
 ---
 
-## Featured Projects
+## Main project path
 
-### 1. [Azure Terraform DevSecOps Container Platform](https://github.com/KarimElAtfy/Azure-Terraform-DevSecOps-Container-Platform)
+My Azure projects follow the same progression shown on my portfolio: from the most complete DevSecOps project down to the foundation infrastructure labs.
 
-A production-inspired Azure DevSecOps project that deploys a containerized FastAPI application using Terraform, Docker, Azure Container Apps, Azure Container Registry, Managed Identity, Key Vault, Application Insights, Log Analytics and GitHub Actions with OIDC.
-
-**Focus of this step**
-Move from VM-based infrastructure projects to a full containerized DevSecOps workflow with CI/CD, identity-based security, secret management, observability and automated deployment validation.
-
-**What it includes**
-
-* Containerized FastAPI application
-* Dockerfile with non-root runtime user
-* Azure Container Registry with admin user disabled
-* Azure Container Apps deployment
-* Azure Key Vault secret reference
-* Runtime Managed Identity with `AcrPull` and Key Vault access
-* GitHub Actions Managed Identity for CI/CD
-* GitHub OIDC authentication without Azure client secrets
-* Terraform remote state on Azure Storage
-* Modular Terraform stacks: bootstrap, core and app
-* Pull Request checks with Terraform validation, Docker build, Checkov and Trivy
-* Automated deployment workflow on merge to `main`
-* Post-deployment smoke test
-* Application Insights and Log Analytics integration
-* Architecture, security, troubleshooting, cost management and cleanup documentation
-
-**What this project helped me practice**
-
-* End-to-end DevSecOps workflow design
-* Azure Container Apps deployment
-* Docker image build and registry push workflow
-* Managed Identity and Azure RBAC
-* Key Vault secret management without storing secret values in Terraform state
-* GitHub Actions OIDC authentication
-* Terraform remote state and stack separation
-* Security scanning with Checkov and Trivy
-* Application observability with OpenTelemetry and Application Insights
-* Smoke testing after deployment
-* Writing recruiter-ready technical documentation
+| Level | Project                        | Main idea                                               |
+| ----- | ------------------------------ | ------------------------------------------------------- |
+| L5    | DevSecOps Container Platform   | Containers, CI/CD, OIDC, security checks, observability |
+| L4    | Load Balanced Web Platform     | Load balancer, private backends, health probes          |
+| L3    | Secure Private Platform        | Bastion, private access, Key Vault, monitoring          |
+| L2    | Secure Two-Tier Infrastructure | Subnet separation, management VM, workload VM           |
+| L1    | Azure Terraform Linux VM       | First clean Azure VM deployment with Terraform          |
 
 ---
 
-### 2. [Azure Terraform Load Balanced Web Platform](https://github.com/KarimElAtfy/Azure-Terraform-Load-Balanced-Web-Platform)
+## Featured projects
 
-A hands-on Azure infrastructure project built with Terraform to deploy a small load-balanced web platform with a public frontend, private ARM64 Ubuntu backend virtual machines, Azure Bastion for secure administration and automated provisioning with cloud-init.
+### L5 · [Azure Terraform DevSecOps Container Platform](https://github.com/KarimElAtfy/Azure-Terraform-DevSecOps-Container-Platform)
 
-**Focus of this step**
-Move from private infrastructure design to public service delivery through a dedicated frontend while keeping backend virtual machines private.
+This is my strongest project so far.
 
-**What it includes**
+It takes a small FastAPI application, containerizes it with Docker, pushes the image to Azure Container Registry, and deploys it to Azure Container Apps through GitHub Actions. Terraform handles the Azure infrastructure, GitHub authenticates to Azure through OIDC, and the pipeline includes validation and security checks before deployment.
 
-* Public Azure Load Balancer
-* Two private ARM64 Ubuntu backend web VMs
-* Backend pool and HTTP health probe
-* Load balancing rule for web traffic on port 80
-* Azure Bastion for secure administrative access
-* Network Security Group and subnet-based security
-* cloud-init bootstrap for automated Nginx provisioning
-* Log Analytics Workspace for monitoring foundation
+The point of this project was not just "run a container on Azure". I wanted to connect the pieces that usually appear together in a real workflow: infrastructure, identity, image build, secrets, deployment, logs, checks and cleanup.
 
-**What this project helped me practice**
+**Main technologies**
 
-* Public frontend and private backend platform design
-* Azure Load Balancer fundamentals
-* Health probes and traffic distribution
-* Multi-VM infrastructure design with Terraform
-* Secure VM administration through Bastion
-* cloud-init automation across multiple instances
-* More resilient web platform design on Azure
+* Azure Container Apps
+* Azure Container Registry
+* Azure Key Vault
+* Managed Identity
+* Log Analytics
+* Application Insights
+* Terraform
+* Docker
+* FastAPI
+* GitHub Actions
+* OIDC
+* Checkov
+* Trivy
 
----
+**What this project shows**
 
-### 3. [Azure Terraform Secure Private Platform](https://github.com/KarimElAtfy/Azure-Terraform-Secure-Private-Platform)
+* I can build a full deployment flow instead of only isolated resources.
+* I understand why secretless authentication matters.
+* I can separate Terraform layers instead of putting everything into one giant file.
+* I can use CI checks to catch problems before deployment.
+* I can validate a deployment with smoke tests and logs, not just by hoping the portal looks fine.
+* I can document architecture, troubleshooting, cost and cleanup.
 
-A Terraform-based Azure infrastructure project focused on private compute, secure administrative access and monitoring foundations, using Azure Bastion instead of direct public VM exposure.
+**What I would harden next**
 
-**Focus of this step**
-Shift from segmented infrastructure to a private-first platform design with more secure administrative access and monitoring components.
-
-**What it includes**
-
-* Private Linux virtual machine with no public IP
-* Azure Bastion for secure administrative access
-* Virtual network with dedicated subnets
-* Log Analytics Workspace for monitoring foundation
-* Key Vault included as a security-oriented platform component
-* Modular Terraform structure
-* ARM64 Ubuntu deployment on Azure
-
-**What this project helped me practice**
-
-* Private infrastructure design on Azure
-* Secure VM administration without direct public SSH
-* Terraform module organization
-* Bastion-based access patterns
-* Monitoring and security service integration
-* More production-aware platform design
+* Private endpoints for ACR, Key Vault and state storage.
+* GitHub Environments with approval gates.
+* Stronger policy enforcement.
+* Image signing or SBOM generation.
+* More production-like network boundaries.
 
 ---
 
-### 4. [Azure Terraform Secure Two-Tier Infrastructure](https://github.com/KarimElAtfy/Azure-Terraform-IaC-Secure-Two-Tier-Infrastructure)
+### L4 · [Azure Terraform Load Balanced Web Platform](https://github.com/KarimElAtfy/Azure-Terraform-Load-Balanced-Web-Platform)
 
-A more realistic Azure infrastructure project built with Terraform to simulate a two-tier environment with separate management and workload layers, subnet-based security and automated provisioning.
+This project moves from single-machine deployments to a more realistic web platform pattern.
 
-**Focus of this step**
-Move from a single VM design to a more structured infrastructure with separated roles and tighter network control.
+It deploys a public Azure Load Balancer in front of private ARM64 Ubuntu backend VMs. The backend machines are provisioned with Nginx through cloud-init, administration goes through Bastion, and health probes decide whether traffic should reach each VM.
 
-**What it includes**
+**Main technologies**
 
-* Virtual network with separate management and web subnets
-* Subnet-based Network Security Groups
-* Dedicated management VM for administrative access
-* Public-facing web VM running Nginx
-* SSH key-based access control
-* Automated VM provisioning through cloud-init
-* ARM64 Ubuntu virtual machines on Azure
+* Azure Load Balancer
+* Backend pools
+* Health probes
+* Private backend VMs
+* Azure Bastion
+* NSGs
+* Terraform
+* cloud-init
+* Nginx
+* ARM64 Ubuntu
 
-**What this project helped me practice**
+**What this project shows**
 
-* Azure virtual network and subnet design
-* Network Security Groups and controlled access paths
-* Infrastructure as Code with Terraform
-* Linux VM provisioning and SSH authentication
+* I understand the basic shape of a load-balanced web platform.
+* I can separate public entry points from private compute.
+* I can use health probes and backend pools instead of manually pointing traffic to one VM.
+* I can keep administrative access away from public SSH.
+* I can automate VM provisioning consistently.
+
+---
+
+### L3 · [Azure Terraform Secure Private Platform](https://github.com/KarimElAtfy/Azure-Terraform-Secure-Private-Platform)
+
+This project focuses on private-first infrastructure.
+
+Instead of exposing a VM directly to the internet, it uses Azure Bastion for access and introduces platform components like Key Vault and Log Analytics. The goal was to stop treating "open SSH to the world" as the default and start thinking more like an infrastructure engineer.
+
+**Main technologies**
+
+* Azure Virtual Network
+* Private Linux VM
+* Azure Bastion
+* Key Vault
+* Log Analytics
+* NSGs
+* Terraform modules
+* Remote state concepts
+
+**What this project shows**
+
+* I can design infrastructure where the VM does not need a public IP.
+* I understand the role of Bastion for administrative access.
+* I can add basic security and monitoring components around compute.
+* I can structure Terraform in a cleaner, more reusable way.
+* I am starting to think in terms of platform foundations, not only single resources.
+
+---
+
+### L2 · [Azure Terraform Secure Two-Tier Infrastructure](https://github.com/KarimElAtfy/Azure-Terraform-IaC-Secure-Two-Tier-Infrastructure)
+
+This project introduces a more structured network layout.
+
+It uses separate management and workload subnets, subnet-scoped NSGs, a dedicated admin VM and a web VM. It is still simple, but it moves beyond the "one VM in one subnet" pattern.
+
+**Main technologies**
+
+* Azure Virtual Network
+* Subnets
+* NSGs
+* Management VM
+* Web VM
+* Terraform
+* cloud-init
+* Linux
+
+**What this project shows**
+
+* I can split infrastructure into different network areas.
+* I understand the difference between management access and workload access.
+* I can provision multiple VMs with different purposes.
+* I can use NSG rules more intentionally.
+* I can keep the code understandable while adding complexity.
+
+---
+
+### L1 · [Azure Terraform Linux VM](https://github.com/KarimElAtfy/Azure-Terraform-IaC-LinuxVM)
+
+This was my first clean Azure infrastructure project with Terraform.
+
+It deploys a Linux VM with custom networking, NSG rules, SSH key access and automated Nginx provisioning through cloud-init. It is intentionally simple, because it is the base I used before moving into segmented networks, private access, load balancing and container deployment.
+
+**Main technologies**
+
+* Azure Linux VM
+* Azure Virtual Network
+* NSG rules
+* SSH keys
+* Terraform
+* cloud-init
+* Nginx
+
+**What this project shows**
+
+* I can provision basic Azure infrastructure with Terraform.
+* I understand the minimum pieces needed to expose a simple Linux web server.
+* I can automate first boot configuration.
+* I can document a foundation project clearly enough to build on it later.
+
+---
+
+## Technical skills
+
+### Cloud and infrastructure
+
+* Azure Resource Groups
+* Azure Virtual Networks and Subnets
+* Network Security Groups
+* Azure Virtual Machines
+* Azure Bastion
+* Azure Load Balancer
+* Azure Container Registry
+* Azure Container Apps
+* Azure Key Vault
+* Managed Identity
+* Log Analytics
+* Application Insights
+
+### Infrastructure as Code
+
+* Terraform
+* Terraform modules
+* variables and outputs
+* remote state on Azure Storage
+* environment separation
+* repeatable deployment workflows
+* infrastructure documentation
+
+### DevOps and security
+
+* Git and GitHub
+* GitHub Actions
+* CI/CD pipelines
+* OIDC-based Azure authentication
+* Docker image builds
+* Checkov for Terraform scanning
+* Trivy for container scanning
+* deployment smoke tests
+* least privilege thinking
+* basic cloud security hardening
+
+### Systems and networking
+
+* Linux fundamentals
+* SSH key-based access
 * cloud-init automation
-* More realistic infrastructure design
+* Nginx provisioning
+* subnetting fundamentals
+* routing and switching concepts
+* private access patterns
+* basic troubleshooting
+
+### Programming and scripting
+
+* Python fundamentals
+* FastAPI used in a containerized Azure deployment project
+* PowerShell fundamentals
+* Bash basics
+* automation-oriented scripting
 
 ---
 
-### 5. [Azure Terraform Linux VM](https://github.com/KarimElAtfy/Azure-Terraform-IaC-LinuxVM)
+## Certifications and study
 
-A practical Azure infrastructure project built with Terraform to deploy a Linux virtual machine with basic networking, secure access and automated web server provisioning.
+* Microsoft Certified: Azure Fundamentals AZ-900
+* Preparing for Microsoft Azure Administrator AZ-104
+* Studying networking fundamentals with CCNA-oriented material
 
-**Focus of this step**
-Build and deploy a first Azure virtual machine environment with Infrastructure as Code.
-
-**What it includes**
-
-* Resource Group, Virtual Network and Subnet
-* Network Security Group rules
-* Linux virtual machine with SSH key-based access
-* Automated Nginx installation through cloud-init
-
-**What this project helped me practice**
-
-* Azure resource structure
-* Infrastructure as Code fundamentals
-* Basic networking and access control
-* Practical deployment workflow from code to running VM
+I try not to study cloud services only in theory. When I learn a concept, I usually turn it into a small deployment and write down what worked, what broke and what I would improve.
 
 ---
 
-## Project Progression
+## How I work
 
-My projects are intentionally built as a progression:
+My usual project flow is:
 
-```text
-Linux VM
-   ↓
-Two-tier infrastructure
-   ↓
-Private platform with Bastion
-   ↓
-Load-balanced web platform
-   ↓
-DevSecOps container platform with CI/CD
-```
+1. build the simplest working version
+2. make it repeatable with Terraform
+3. add one realistic constraint
+4. break something
+5. debug it properly
+6. document the fix
+7. use the lesson in the next project
 
-Each project adds a new layer of complexity:
+I care about documentation because infrastructure that only works in my head is not good infrastructure.
 
-* First, basic Azure infrastructure and Terraform.
-* Then, subnet separation and security rules.
-* Then, private compute and secure administration.
-* Then, load balancing and private backend services.
-* Finally, containerized workloads, CI/CD, Managed Identity, Key Vault, observability and security scanning.
+A project should explain:
 
-This progression helps me learn cloud engineering through real implementation rather than isolated theory.
+* what it deploys
+* why it is designed that way
+* how to run it
+* how to destroy it
+* what the limitations are
+* what should be improved in a more production-like setup
 
 ---
 
-## How I Approach Learning
+## Currently improving
 
-I learn best by building.
+Right now I am focusing on:
 
-My approach is:
-
-```text
-Build something
-Break something
-Understand the problem
-Fix it
-Document what happened
-Improve the next project
-```
-
-I try to make each project more complete than the previous one, both technically and in the way it is documented.
-
-I care about being able to explain not only what I built, but also why each design choice was made.
-
----
-
-## Currently Improving
-
-* Azure administration knowledge
-* Terraform best practices
+* Azure administration for AZ-104
+* stronger Terraform structure
 * Docker and container workflows
-* GitHub Actions CI/CD
-* Linux operational confidence
-* Networking fundamentals
-* Cloud security fundamentals
-* Infrastructure design mindset
-* Monitoring and troubleshooting skills
+* CI/CD patterns with GitHub Actions
+* Linux troubleshooting
+* networking fundamentals
+* cloud security basics
+* monitoring and observability
+* cleaner technical documentation
 
 ---
 
 ## Languages
 
-* Italian — native
-* English — C1
-* French — conversational
-* German — currently learning
-* Russian — currently learning
+* Italian: native
+* English: advanced
+* French: intermediate
+* Spanish: learning
+* German: learning
+* Russian: learning
 
 ---
 
-## Contact
+## Links
 
-* LinkedIn: [www.linkedin.com/in/karim-el-atfy](https://www.linkedin.com/in/karim-el-atfy)
-* Portfolio [www.kaystack.dev](https://www.kaystack.dev)
+* Portfolio: [kaystack.dev](https://kaystack.dev)
+* LinkedIn: [linkedin.com/in/karim-el-atfy](https://www.linkedin.com/in/karim-el-atfy)
+
+---
